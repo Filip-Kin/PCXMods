@@ -1,0 +1,184 @@
+/* Filip's Dark Theme */
+/* Light Blue */
+mat-toolbar.mat-toolbar.dialog-toolbar,
+app-student-courses mat-progress-bar .mat-progress-bar-fill:after,
+.app-theme-blue .mat-toolbar.mat-primary,
+html[buzz-version^="3."] .app-theme .mat-drawer-content.mat-sidenav-content mat-toolbar.buzz-main-header.app-primary-dark-background,
+.xli-activity-date.ng-binding.ng-scope
+.color-band.rounded {
+    background: #0487d1 !important;
+}
+
+/* Dark Blue */
+.left-ct.ng-pristine.ng-valid.ng-touched,
+.mat-tab-labels,
+.app-theme .mat-button-toggle-appearance-standard.mat-button-toggle-checked,
+.mat-tab-header-pagination {
+    background: #03569b !important;
+    color: white !important;
+}
+
+/* Darkest */
+html,
+.main.app-background,
+.mat-drawer-inner-container,
+app-student-courses,
+app-student-to-do,
+app-student-stream,
+mat-nav-list,
+.app-background-card.top-page,
+mat,
+.announcement-list,
+.buzz-course-activity-stream,
+activity-sidebar,
+.buzz-course-home.ng-scope,
+.app-theme app-student-grades .mat-toolbar,
+.app-theme app-student-grades .main.ng-star-inserted,
+app-what-if.ng-star-inserted,
+app-gradebook-dashboard,
+app-student-activity,
+app-student-objective-mastery,
+app-badges,
+app-student-course-settings,
+app-settings form.top-content.app-background {
+    background: #212121 !important;
+    color: white !important;
+}
+
+/* Dark */
+a.menu-course-entry,
+.menu-subentry-ct a,
+.mat-card,
+.xli-date-group,
+app-user-notes-results,
+mat-table,
+mat-header-cell,
+mat-cell,
+mat-expansion-panel,
+app-inbox,
+.calendar-list,
+.buzz-course-summary,
+.buzz-course-details p,
+.buzz-course-details p font,
+.buzz-course-details p span,
+.buzz-folder-home,
+app-activity-item,
+.xli-flex-body.buzz-activity-ct,
+.xli-item-content span,
+.xli-item-content th,
+.mat-paginator-container,
+mat-calendar {
+    background: #2c2f33 !important;
+    color: white !important;
+}
+
+/* Blueish */
+.selected,
+.xli-selected,
+.mat-tab-body-content,
+body.xli-flex-enabled.app-theme,
+.xli-tree-content.xli-toolbar.xli-item-type-folder:hover,
+.buzz-side-bar xli-course-tree .xli-tree-content:hover,
+.buzz-tabbed-side-bar xli-course-tree .xli-tree-content:hover,
+.app-theme .mat-toolbar,
+.main.ng-star-inserted,
+.buzz-side-bar xli-course-tree .xli-selected,
+.buzz-tabbed-side-bar xli-course-tree div.xli-selected,
+.buzz-side-bar xli-course-tree div.xli-selected,
+.buzz-side-bar xli-course-tree div.xli-tree-content:hover,
+.buzz-tabbed-side-bar xli-course-tree div.xli-tree-content:hover,
+.menu-subentry-ct a.ng-trigger:hover,
+a.menu-course-entry.ng-trigger:hover,
+.mat-nav-list .mat-list-item.ng-star-inserted:hover,
+.app-theme .mat-button-toggle-appearance-standard:not(.mat-button-toggle-checked),
+div.xli-comment-well {
+    background-color: #263238 !important;
+}
+
+a.menu-course-entry:hover,
+.menu-subentry-ct a:hover,
+.calendar-list .list-date .list-date-events .list-date-event:focus,
+.calendar-list .list-date .list-date-events .list-date-event:hover,
+.item-combined.btn-border-less:hover,
+.buzz-folder-item>a:focus>span,
+.buzz-folder-item>a:hover>span {
+    background-color: rgba(0, 0, 0, .04) !important;
+}
+
+mat-row:hover mat-cell {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Text Recolors */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+div,
+h1.ng-scope,
+h2.ng-scope,
+h3.ng-scope,
+h4.ng-scope,
+h5.ng-scope,
+div.ng-scope,
+p.ng-scope,
+li.ng-scope,
+mat-panel-title,
+.xli-item-title,
+.item-title,
+label,
+span.minutes,
+td.mat-calendar-body-label.ng-star-inserted,
+th.ng-star-inserted  {
+    color: white !important;
+}
+
+a {
+    color: #03A9F4 !important;
+}
+
+.app-theme .mat-card-subtitle, 
+.mat-progress-bar-percentage,
+mat-icon,
+.app-theme .mat-list-base .mat-list-item,
+.app-theme .mat-list-base .mat-list-option,
+.mat-list-text,
+.app-no-data-message .app-theme h3,
+.app-theme .app-foreground-secondary-text,
+.app-theme .app-no-data-message h3 {
+    color: #c2c2c2 !important;
+}
+
+.pass-color,
+.pass {
+    color: #00E676 !important;
+}
+
+/* Border Recolors */
+.app-theme-light-blue .mat-tab-header,
+.xli-activity-date.ng-binding.ng-scope {
+    border: none;
+}
+
+.mat-checkbox-frame,
+.mat-radio-outer-circle {
+    border-color: #ffffff !important;
+}
+
+.mat-checkbox-disabled .mat-checkbox-frame {
+    border-color: #626262 !important;
+}
+
+mat-divider.mat-divider.mat-divider-vertical,
+div.xli-comment-well {
+    border-color: #263238 !important;
+}
+
+/* Custom CSS Elements */
+.mat-progress-bar-percentage {
+    transform: translate(-25px, -39px);
+    position: absolute;
+}

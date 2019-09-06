@@ -91,14 +91,14 @@ body.xli-flex-enabled.app-theme,
 a.menu-course-entry.ng-trigger:hover,
 .mat-nav-list .mat-list-item.ng-star-inserted:hover,
 .app-theme .mat-button-toggle-appearance-standard:not(.mat-button-toggle-checked),
-div.xli-comment-well {
+div.xli-comment-well,
+.calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:focus,
+.calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:hover {
     background-color: #263238 !important;
 }
 
 a.menu-course-entry:hover,
 .menu-subentry-ct a:hover,
-.calendar-list .list-date .list-date-events .list-date-event:focus,
-.calendar-list .list-date .list-date-events .list-date-event:hover,
 .item-combined.btn-border-less:hover,
 .buzz-folder-item>a:focus>span,
 .buzz-folder-item>a:hover>span {

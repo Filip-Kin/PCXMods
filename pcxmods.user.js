@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filip's PCX Mods
 // @namespace    https://filipkin.com
-// @version      0.5.2
+// @version      0.6.0
 // @description  Make PCX like actually usable
 // @author       Filip Kin
 // @match        https://*.lms.pearsonconnexus.com/*
@@ -12,10 +12,23 @@
   'use strict';
 
   // Apply dark theme
-  let styleElm = document.createElement('style');
-  styleElm.link = 'http://filipk.in/s/pcxdarktheme.css';
-  document.head.appendChild(styleElm);
-  console.log('Applied dark theme');
+  let applyDarkTheme = () => {
+    let link = document.createElement('link');
+    link.rel = 'stylesheet'
+    link.href = 'https://filipkin.com/s/pcxdarktheme.css';
+    document.head.appendChild(link);
+    console.log('Applied dark theme');
+  }
+
+  // Remove !important tag on color related css
+  let killImportant = () => {
+    for (let elm of document.head.children) {
+      if (elm.nodeName === 'STYLE') {
+        let importantRegex = /(color:[ ]{0,}#[0-9a-f]{3,6})[ ]{0,}\!important/;
+        elm.innerHTML = elm.innerHTML.replace(importantRegex, '$1');
+      }
+    }
+  }
 
   // Remove Webmail button from nav
   let killWebMail = () => {
@@ -53,10 +66,16 @@
     });
   }
 
+  // On page connect run some init stuff
+  let init = () => {
+    applyDarkTheme();
+  }
+
   // On page load run the javascriptz
   let load = () => {
     setTimeout(() => {
       try { // Try doing all the JS magicz
+        killImportant();
         killWebMail();
         percentages();
         timeSpent();
@@ -112,5 +131,6 @@
   }
 
   // Everything is defined! Let's load!
+  init();
   load();
 })();

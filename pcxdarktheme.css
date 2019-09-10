@@ -40,7 +40,8 @@ app-student-activity,
 app-student-objective-mastery,
 app-badges,
 app-student-course-settings,
-app-settings form.top-content.app-background {
+app-settings form.top-content.app-background,
+.btn-toolbar.xli-editor-toolbar {
     background: #212121 !important;
     color: white !important;
 }
@@ -93,7 +94,8 @@ a.menu-course-entry.ng-trigger:hover,
 .app-theme .mat-button-toggle-appearance-standard:not(.mat-button-toggle-checked),
 div.xli-comment-well,
 .calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:focus,
-.calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:hover {
+.calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:hover,
+.xli-editor-content.content{
     background-color: #263238 !important;
 }
 
@@ -158,9 +160,9 @@ mat-icon,
 }
 
 /* Border Recolors */
-.app-theme-light-blue .mat-tab-header,
+xli-editor, xli-editor button, .app-theme-light-blue .mat-tab-header,
 .xli-activity-date.ng-binding.ng-scope {
-    border: none;
+    border: none !important;
 }
 
 .mat-checkbox-frame,

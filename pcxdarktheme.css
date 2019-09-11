@@ -186,6 +186,8 @@ app-activity mat-tab-group div.mat-tab-body-wrapper .mat-tab-body.mat-tab-body-a
 
 /* Custom CSS Elements */
 .mat-progress-bar-percentage {
-    transform: translate(-25px, -39px);
+    transform: translate(-38px, -39px);
     position: absolute;
+    width: 35px;
+    text-align: right;
 }

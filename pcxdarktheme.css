@@ -41,7 +41,8 @@ app-student-objective-mastery,
 app-badges,
 app-student-course-settings,
 app-settings form.top-content.app-background,
-.btn-toolbar.xli-editor-toolbar {
+.btn-toolbar.xli-editor-toolbar,
+activity-sidebar div.ng-scope:not(.xli-item-title) {
     background: #212121 !important;
     color: white !important;
 }
@@ -68,7 +69,12 @@ app-activity-item,
 .xli-item-content span,
 .xli-item-content th,
 .mat-paginator-container,
-mat-calendar {
+mat-calendar,
+li.buzz-to-do-item.ng-scope,
+.xli-tree-content.xli-toolbar.xli-item-type-folder,
+.panel-collapse div.panel-body,
+.panel-body .buzz-to-do-list-ct.ng-scope,
+.empty.ng-binding.ng-scope {
     background: #2c2f33 !important;
     color: white !important;
 }
@@ -95,7 +101,10 @@ a.menu-course-entry.ng-trigger:hover,
 div.xli-comment-well,
 .calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:focus,
 .calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:hover,
-.xli-editor-content.content{
+.xli-editor-content.content,
+html .buzz-to-do-list-ct .buzz-to-do-list li.buzz-to-do-item:hover,
+.xli-tree-content.xli-toolbar.xli-item-type-folder.xli-selected,
+.xli-tree-content.xli-toolbar.xli-item-type-assignment.xli-selected {
     background-color: #263238 !important;
 }
 
@@ -175,13 +184,23 @@ xli-editor, xli-editor button, .app-theme-light-blue .mat-tab-header,
 }
 
 mat-divider.mat-divider.mat-divider-vertical,
-div.xli-comment-well {
+div.xli-comment-well,
+li.buzz-to-do-item.ng-scope {
     border-color: #263238 !important;
 }
 
 /* Other CSS Fixes */
 app-activity mat-tab-group div.mat-tab-body-wrapper .mat-tab-body.mat-tab-body-active {
     overflow-y: hidden !important;
+}
+
+html .panel.panel-default {
+    box-shadow: none !important;
+}
+
+html .buzz-side-bar xli-course-tree ul[role=tree] .xli-selected:before,
+html .buzz-side-bar xli-course-tree ul[role=tree] .xli-selected:after {
+    height: 0 !important;
 }
 
 /* Custom CSS Elements */

@@ -74,37 +74,14 @@ li.buzz-to-do-item.ng-scope,
 .xli-tree-content.xli-toolbar.xli-item-type-folder,
 .panel-collapse div.panel-body,
 .panel-body .buzz-to-do-list-ct.ng-scope,
-.empty.ng-binding.ng-scope {
+.empty.ng-binding.ng-scope,
+.modal-content {
     background: #2c2f33 !important;
     color: white !important;
 }
 
 /* Blueish */
-.selected,
-.xli-selected,
-.mat-tab-body-content,
-body.xli-flex-enabled.app-theme,
-.xli-tree-content.xli-toolbar.xli-item-type-folder:hover,
-.buzz-side-bar xli-course-tree .xli-tree-content:hover,
-.buzz-tabbed-side-bar xli-course-tree .xli-tree-content:hover,
-.app-theme .mat-toolbar,
-.main.ng-star-inserted,
-.buzz-side-bar xli-course-tree .xli-selected,
-.buzz-tabbed-side-bar xli-course-tree div.xli-selected,
-.buzz-side-bar xli-course-tree div.xli-selected,
-.buzz-side-bar xli-course-tree div.xli-tree-content:hover,
-.buzz-tabbed-side-bar xli-course-tree div.xli-tree-content:hover,
-.menu-subentry-ct a.ng-trigger:hover,
-a.menu-course-entry.ng-trigger:hover,
-.mat-nav-list .mat-list-item.ng-star-inserted:hover,
-.app-theme .mat-button-toggle-appearance-standard:not(.mat-button-toggle-checked),
-div.xli-comment-well,
-.calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:focus,
-.calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:hover,
-.xli-editor-content.content,
-html .buzz-to-do-list-ct .buzz-to-do-list li.buzz-to-do-item:hover,
-.xli-tree-content.xli-toolbar.xli-item-type-folder.xli-selected,
-.xli-tree-content.xli-toolbar.xli-item-type-assignment.xli-selected {
+.selected, .xli-selected, .mat-tab-body-content, body.xli-flex-enabled.app-theme, .xli-tree-content.xli-toolbar.xli-item-type-folder:hover, .buzz-side-bar xli-course-tree .xli-tree-content:hover, .buzz-tabbed-side-bar xli-course-tree .xli-tree-content:hover, .app-theme .mat-toolbar, .main.ng-star-inserted, .buzz-side-bar xli-course-tree .xli-selected, .buzz-tabbed-side-bar xli-course-tree div.xli-selected, .buzz-side-bar xli-course-tree ul li div.xli-tree-content.xli-selected, .buzz-side-bar xli-course-tree div.xli-tree-content:hover, .buzz-tabbed-side-bar xli-course-tree div.xli-tree-content:hover, .menu-subentry-ct a.ng-trigger:hover, a.menu-course-entry.ng-trigger:hover, .mat-nav-list .mat-list-item.ng-star-inserted:hover, .app-theme .mat-button-toggle-appearance-standard:not(.mat-button-toggle-checked), div.xli-comment-well, .calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:focus, .calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:hover, .xli-editor-content.content, html .buzz-to-do-list-ct .buzz-to-do-list li.buzz-to-do-item:hover, .xli-tree-content.xli-toolbar.xli-item-type-folder.xli-selected, .xli-tree-content.xli-toolbar.xli-item-type-assignment.xli-selected {
     background-color: #263238 !important;
 }
 

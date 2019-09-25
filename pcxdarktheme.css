@@ -42,7 +42,8 @@ app-badges,
 app-student-course-settings,
 app-settings form.top-content.app-background,
 .btn-toolbar.xli-editor-toolbar,
-activity-sidebar div.ng-scope:not(.xli-item-title) {
+activity-sidebar div.ng-scope:not(.xli-item-title),
+.panel.panel-default.panel-body.xli-flex-footer.xli-item-dropbox.ng-scope.in {
     background: #212121 !important;
     color: white !important;
 }
@@ -148,7 +149,8 @@ mat-icon,
 /* Border Recolors */
 xli-editor, xli-editor button, .app-theme-light-blue .mat-tab-header,
 .xli-activity-date.ng-binding.ng-scope,
-xli-question .xli-question-print-workspace {
+xli-question .xli-question-print-workspace,
+.panel.panel-default.panel-body.xli-flex-footer.xli-item-dropbox.ng-scope.in {
     border: none !important;
 }
 

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filip's PCX Mods
 // @namespace    https://filipkin.com
-// @version      0.6.0
+// @version      0.6.1
 // @description  Make PCX like actually usable
 // @author       Filip Kin
 // @match        https://*.lms.pearsonconnexus.com/*
@@ -66,6 +66,16 @@
     });
   }
 
+  // Recolor highlighted text
+  let highlightedRecolor = () => {
+      console.debug('Attempting to recolor highlighted text');
+      document.querySelectorAll('.xli-course-content font, .xli-course-content b, .xli-course-content span, .xli-course-content td, .xli-course-content p').forEach(elm => {
+          if (elm.style.backgroundColor === 'rgb(255, 255, 0)') {
+                elm.style.backgroundColor = 'rgb(0, 125, 255)'
+          }
+      });
+  }
+  
   // On page connect run some init stuff
   let init = () => {
     applyDarkTheme();
@@ -79,6 +89,7 @@
         killWebMail();
         percentages();
         timeSpent();
+        highlightedRecolor();
         console.log('Filip\'s PCX Mods fully loaded :)'); // If it worked without error, we all good
       } catch (err) {
         // If we get an error it means the page didn't load yet
@@ -97,6 +108,7 @@
       try {
         percentages();
         timeSpent();
+        highlightedRecolor();
         fixNav();
         console.log('Filip\'s PCX Mods reloaded'); // If it worked without error, we all good
       } catch (err) {

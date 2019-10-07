@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filip's PCX Mods
 // @namespace    https://filipkin.com
-// @version      0.6.1
+// @version      0.6.2
 // @description  Make PCX like actually usable
 // @author       Filip Kin
 // @match        https://*.lms.pearsonconnexus.com/*
@@ -68,12 +68,15 @@
 
   // Recolor highlighted text
   let highlightedRecolor = () => {
-      console.debug('Attempting to recolor highlighted text');
-      document.querySelectorAll('.xli-course-content font, .xli-course-content b, .xli-course-content span, .xli-course-content td, .xli-course-content p').forEach(elm => {
-          if (elm.style.backgroundColor === 'rgb(255, 255, 0)') {
-                elm.style.backgroundColor = 'rgb(0, 125, 255)'
-          }
-      });
+    console.debug('Attempting to recolor highlighted text');
+    document.querySelectorAll('.xli-item-content font, .xli-item-content b, .xli-item-content span, .xli-item-content td, .xli-item-content p, .xli-item-content div').forEach(elm => {
+        let bgCol = elm.style.backgroundColor;
+        if (bgCol === 'rgb(255, 255, 0)') {
+              elm.style.backgroundColor = 'rgb(0, 125, 255)'
+        } else if (bgCol === 'rgb(253, 253, 253)' || bgCol === 'rgb(255, 255, 255)') {
+              elm.style.backgroundColor = '';
+        }
+    });
   }
   
   // On page connect run some init stuff
@@ -90,6 +93,12 @@
         percentages();
         timeSpent();
         highlightedRecolor();
+        setTimeout(highlightedRecolor, 1000); // Sometimes course content takes a little bit to load
+        setTimeout(highlightedRecolor, 2000);
+        setTimeout(highlightedRecolor, 3000);
+        setTimeout(highlightedRecolor, 4000);
+        setTimeout(highlightedRecolor, 5000); // And this is my lazy way  of getting around this issue
+        // TODO: Make an interval that checks the course item content to see if it's done loading
         console.log('Filip\'s PCX Mods fully loaded :)'); // If it worked without error, we all good
       } catch (err) {
         // If we get an error it means the page didn't load yet
@@ -109,6 +118,12 @@
         percentages();
         timeSpent();
         highlightedRecolor();
+        setTimeout(highlightedRecolor, 1000); // Sometimes course content takes a little bit to load
+        setTimeout(highlightedRecolor, 2000);
+        setTimeout(highlightedRecolor, 3000);
+        setTimeout(highlightedRecolor, 4000);
+        setTimeout(highlightedRecolor, 5000); // And this is my lazy way  of getting around this issue
+        // TODO: Make an interval that checks the course item content to see if it's done loading
         fixNav();
         console.log('Filip\'s PCX Mods reloaded'); // If it worked without error, we all good
       } catch (err) {

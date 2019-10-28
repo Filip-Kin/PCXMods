@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filip's PCX Mods
 // @namespace    https://filipkin.com
-// @version      0.6.2
+// @version      0.6.3
 // @description  Make PCX like actually usable
 // @author       Filip Kin
 // @match        https://*.lms.pearsonconnexus.com/*
@@ -60,9 +60,13 @@
   let timeSpent = () => {
     console.debug('Attemptign to replace minutes spent with hours spent');
     document.querySelectorAll('app-student-courses div.detail-ct span.minutes.ng-star-inserted').forEach(elm => {
-      let minutes = elm.innerHTML.replace('m', ''); // Grab just the number
-      let time = Math.round(minutes / 6) / 10 // Divide minutes by 60 then multiply by 10 to round to 1 decimal point and divide back by 10
-      elm.innerHTML = time + 'h'; // Put it back where it came from
+      if (elm.innerHTML.includes('h')) {
+          console.debug('Time spent already in hours');
+      } else {
+          let minutes = elm.innerHTML.replace('m', ''); // Grab just the number
+          let time = Math.round(minutes / 6) / 10 // Divide minutes by 60 then multiply by 10 to round to 1 decimal point and divide back by 10
+          elm.innerHTML = time + 'h'; // Put it back where it came from
+      }
     });
   }
 

@@ -78,7 +78,8 @@ li.buzz-to-do-item.ng-scope,
 .panel-collapse div.panel-body,
 .panel-body .buzz-to-do-list-ct.ng-scope,
 .empty.ng-binding.ng-scope,
-.modal-content {
+.modal-content,
+.app-theme-blue .mat-dialog-container {
     background: #2c2f33 !important;
     color: white !important;
 }

@@ -82,7 +82,14 @@
         }
     });
   }
-  
+
+  // Invert color on pictures in quizzes
+  let invertQuizImg = () => {
+      document.querySelectorAll("xli-question img").forEach(elm => {
+          elm.style.filter = "invert()";
+      });
+  }
+
   // On page connect run some init stuff
   let init = () => {
     applyDarkTheme();
@@ -97,6 +104,7 @@
         percentages();
         timeSpent();
         highlightedRecolor();
+        invertQuizImg();
         setTimeout(highlightedRecolor, 1000); // Sometimes course content takes a little bit to load
         setTimeout(highlightedRecolor, 2000);
         setTimeout(highlightedRecolor, 3000);
@@ -122,6 +130,7 @@
         percentages();
         timeSpent();
         highlightedRecolor();
+        invertQuizImg();
         setTimeout(highlightedRecolor, 1000); // Sometimes course content takes a little bit to load
         setTimeout(highlightedRecolor, 2000);
         setTimeout(highlightedRecolor, 3000);

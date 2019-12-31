@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filip's PCX Mods
 // @namespace    https://filipkin.com
-// @version      0.6.3
+// @version      0.6.4
 // @description  Make PCX like actually usable
 // @author       Filip Kin
 // @match        https://*.lms.pearsonconnexus.com/*

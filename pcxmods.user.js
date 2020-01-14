@@ -73,11 +73,11 @@
   // Recolor highlighted text
   let highlightedRecolor = () => {
     console.debug('Attempting to recolor highlighted text');
-    document.querySelectorAll('.xli-item-content font, .xli-item-content b, .xli-item-content span, .xli-item-content td, .xli-item-content p, .xli-item-content div').forEach(elm => {
+    document.querySelectorAll('.xli-item-content font, .xli-item-content ul, .xli-item-content li, .xli-item-content b, .xli-item-content span, .xli-item-content td, .xli-item-content p, .xli-item-content div').forEach(elm => {
         let bgCol = elm.style.backgroundColor;
         if (bgCol === 'rgb(255, 255, 0)') {
               elm.style.backgroundColor = 'rgb(0, 125, 255)'
-        } else if (bgCol === 'rgb(253, 253, 253)' || bgCol === 'rgb(255, 255, 255)') {
+        } else if (bgCol === 'rgb(255, 255, 253)' || bgCol === 'rgb(253, 253, 253)' || bgCol === 'rgb(255, 255, 255)') {
               elm.style.backgroundColor = '';
         }
     });

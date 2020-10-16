@@ -117,7 +117,8 @@ html .buzz-to-do-list-ct .buzz-to-do-list li.buzz-to-do-item:hover,
 .xli-tree-content.xli-toolbar.xli-item-type-assignment.xli-selected,
 xli-question .xli-question-print-workspace,
 td.ng-scope.xli-selected,
-lib-managed-html.comment {
+lib-managed-html.comment,
+mat-dialog-container {
     background-color: #263238 !important;
 }
 

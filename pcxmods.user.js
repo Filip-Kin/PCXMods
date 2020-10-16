@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filip's PCX Mods
 // @namespace    https://filipkin.com
-// @version      0.6.2
+// @version      0.6.7
 // @description  Make PCX like actually usable
 // @author       Filip Kin
 // @match        https://*.lms.pearsonconnexus.com/*
@@ -60,25 +60,50 @@
   let timeSpent = () => {
     console.debug('Attemptign to replace minutes spent with hours spent');
     document.querySelectorAll('app-student-courses div.detail-ct span.minutes.ng-star-inserted').forEach(elm => {
-      let minutes = elm.innerHTML.replace('m', ''); // Grab just the number
-      let time = Math.round(minutes / 6) / 10 // Divide minutes by 60 then multiply by 10 to round to 1 decimal point and divide back by 10
-      elm.innerHTML = time + 'h'; // Put it back where it came from
+      if (elm.innerHTML.includes('h')) {
+          console.debug('Time spent already in hours');
+      } else {
+          let minutes = elm.innerHTML.replace('m', ''); // Grab just the number
+          let time = Math.round(minutes / 6) / 10 // Divide minutes by 60 then multiply by 10 to round to 1 decimal point and divide back by 10
+          elm.innerHTML = time + 'h'; // Put it back where it came from
+      }
     });
   }
 
   // Recolor highlighted text
   let highlightedRecolor = () => {
     console.debug('Attempting to recolor highlighted text');
-    document.querySelectorAll('.xli-item-content font, .xli-item-content b, .xli-item-content span, .xli-item-content td, .xli-item-content p, .xli-item-content div').forEach(elm => {
+    document.querySelectorAll('font, ul, li, b, span, td, p, div, .xli-item-content font, .xli-item-content ul, .xli-item-content li, .xli-item-content b, .xli-item-content span, .xli-item-content td, .xli-item-content p, .xli-item-content div').forEach(elm => {
         let bgCol = elm.style.backgroundColor;
         if (bgCol === 'rgb(255, 255, 0)') {
               elm.style.backgroundColor = 'rgb(0, 125, 255)'
-        } else if (bgCol === 'rgb(253, 253, 253)' || bgCol === 'rgb(255, 255, 255)') {
+        } else if (bgCol === 'rgb(255, 255, 253)' || bgCol === 'rgb(253, 253, 253)' || bgCol === 'rgb(255, 255, 255)') {
               elm.style.backgroundColor = '';
         }
     });
+    textRecolor();
   }
-  
+
+  // Recolor black text
+  let textRecolor = () => {
+    console.debug('Attempting to recolor black text');
+    document.querySelectorAll('font, ul, li, b, span, td, p, div, .xli-item-content font, .xli-item-content ul, .xli-item-content li, .xli-item-content b, .xli-item-content span, .xli-item-content td, .xli-item-content p, .xli-item-content div').forEach(elm => {
+        let bgCol = elm.style.color;
+        if (bgCol === 'rgb(65, 65, 65)') {
+              elm.style.color = 'rgb(150, 150, 150)'
+        } else if (bgCol === 'rgb(0, 0, 0)') {
+              elm.style.color = 'rgb(255, 255, 255';
+        }
+    });
+  }
+
+  // Invert color on pictures in quizzes
+  let invertQuizImg = () => {
+      document.querySelectorAll("xli-question img").forEach(elm => {
+          elm.style.filter = "invert()";
+      });
+  }
+
   // On page connect run some init stuff
   let init = () => {
     applyDarkTheme();
@@ -93,6 +118,7 @@
         percentages();
         timeSpent();
         highlightedRecolor();
+        invertQuizImg();
         setTimeout(highlightedRecolor, 1000); // Sometimes course content takes a little bit to load
         setTimeout(highlightedRecolor, 2000);
         setTimeout(highlightedRecolor, 3000);
@@ -118,6 +144,7 @@
         percentages();
         timeSpent();
         highlightedRecolor();
+        invertQuizImg();
         setTimeout(highlightedRecolor, 1000); // Sometimes course content takes a little bit to load
         setTimeout(highlightedRecolor, 2000);
         setTimeout(highlightedRecolor, 3000);
@@ -143,6 +170,7 @@
   let currentLocation = window.location.href; // Get the inital load location
   let locationChange = () => {
     console.debug('Checking location');
+    highlightedRecolor();
     if (window.location.href !== currentLocation) {
       console.debug('location changed');
       currentLocation = window.location.href; // Reset location

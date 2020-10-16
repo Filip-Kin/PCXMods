@@ -4,8 +4,7 @@ mat-toolbar.mat-toolbar.dialog-toolbar,
 app-student-courses mat-progress-bar .mat-progress-bar-fill:after,
 .app-theme-blue .mat-toolbar.mat-primary,
 html[buzz-version^="3."] .app-theme .mat-drawer-content.mat-sidenav-content mat-toolbar.buzz-main-header.app-primary-dark-background,
-.xli-activity-date.ng-binding.ng-scope
-.color-band.rounded {
+.xli-activity-date.ng-binding.ng-scope .color-band.rounded {
     background: #0487d1 !important;
 }
 
@@ -43,7 +42,12 @@ app-student-course-settings,
 app-settings form.top-content.app-background,
 .btn-toolbar.xli-editor-toolbar,
 activity-sidebar div.ng-scope:not(.xli-item-title),
-.panel.panel-default.panel-body.xli-flex-footer.xli-item-dropbox.ng-scope.in {
+.panel.panel-default.panel-body.xli-flex-footer.xli-item-dropbox.ng-scope.in,
+.card-ct,
+.mat-tree-node.cdk-tree-node,
+mat-tab-body.mat-tab-body,
+.mat-drawer-content.app-background,
+div.links {
     background: #212121 !important;
     color: white !important;
 }
@@ -78,13 +82,42 @@ li.buzz-to-do-item.ng-scope,
 .panel-collapse div.panel-body,
 .panel-body .buzz-to-do-list-ct.ng-scope,
 .empty.ng-binding.ng-scope,
-.modal-content {
+.modal-content,
+div.nav-footer,
+.mat-drawer-content .activity-html {
     background: #2c2f33 !important;
     color: white !important;
 }
 
 /* Blueish */
-.selected, .xli-selected, .mat-tab-body-content, body.xli-flex-enabled.app-theme, .xli-tree-content.xli-toolbar.xli-item-type-folder:hover, .buzz-side-bar xli-course-tree .xli-tree-content:hover, .buzz-tabbed-side-bar xli-course-tree .xli-tree-content:hover, .app-theme .mat-toolbar, .main.ng-star-inserted, .buzz-side-bar xli-course-tree .xli-selected, .buzz-tabbed-side-bar xli-course-tree div.xli-selected, .buzz-side-bar xli-course-tree ul li div.xli-tree-content.xli-selected, .buzz-side-bar xli-course-tree div.xli-tree-content:hover, .buzz-tabbed-side-bar xli-course-tree div.xli-tree-content:hover, .menu-subentry-ct a.ng-trigger:hover, a.menu-course-entry.ng-trigger:hover, .mat-nav-list .mat-list-item.ng-star-inserted:hover, .app-theme .mat-button-toggle-appearance-standard:not(.mat-button-toggle-checked), div.xli-comment-well, .calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:focus, .calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:hover, .xli-editor-content.content, html .buzz-to-do-list-ct .buzz-to-do-list li.buzz-to-do-item:hover, .xli-tree-content.xli-toolbar.xli-item-type-folder.xli-selected, .xli-tree-content.xli-toolbar.xli-item-type-assignment.xli-selected, xli-question .xli-question-print-workspace, td.ng-scope.xli-selected {
+.selected,
+.xli-selected,
+.mat-tab-body-content,
+body.xli-flex-enabled.app-theme,
+.xli-tree-content.xli-toolbar.xli-item-type-folder:hover,
+.buzz-side-bar xli-course-tree .xli-tree-content:hover,
+.buzz-tabbed-side-bar xli-course-tree .xli-tree-content:hover,
+.app-theme .mat-toolbar,
+.main.ng-star-inserted,
+.buzz-side-bar xli-course-tree .xli-selected,
+.buzz-tabbed-side-bar xli-course-tree div.xli-selected,
+.buzz-side-bar xli-course-tree ul li div.xli-tree-content.xli-selected,
+.buzz-side-bar xli-course-tree div.xli-tree-content:hover,
+.buzz-tabbed-side-bar xli-course-tree div.xli-tree-content:hover,
+.menu-subentry-ct a.ng-trigger:hover,
+a.menu-course-entry.ng-trigger:hover,
+.mat-nav-list .mat-list-item.ng-star-inserted:hover,
+.app-theme .mat-button-toggle-appearance-standard:not(.mat-button-toggle-checked),
+div.xli-comment-well,
+.calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:focus,
+.calendar-list .list-date .list-date-events .list-date-event.ng-star-inserted:hover,
+.xli-editor-content.content,
+html .buzz-to-do-list-ct .buzz-to-do-list li.buzz-to-do-item:hover,
+.xli-tree-content.xli-toolbar.xli-item-type-folder.xli-selected,
+.xli-tree-content.xli-toolbar.xli-item-type-assignment.xli-selected,
+xli-question .xli-question-print-workspace,
+td.ng-scope.xli-selected,
+lib-managed-html.comment {
     background-color: #263238 !important;
 }
 
@@ -123,7 +156,8 @@ mat-panel-title,
 label,
 span.minutes,
 td.mat-calendar-body-label.ng-star-inserted,
-th.ng-star-inserted  {
+th.ng-star-inserted,
+.links * {
     color: white !important;
 }
 
@@ -131,7 +165,7 @@ a {
     color: #03A9F4 !important;
 }
 
-.app-theme .mat-card-subtitle, 
+.app-theme .mat-card-subtitle,
 .mat-progress-bar-percentage,
 mat-icon,
 .app-theme .mat-list-base .mat-list-item,
@@ -149,7 +183,9 @@ mat-icon,
 }
 
 /* Border Recolors */
-xli-editor, xli-editor button, .app-theme-light-blue .mat-tab-header,
+xli-editor,
+xli-editor button,
+.app-theme-light-blue .mat-tab-header,
 .xli-activity-date.ng-binding.ng-scope,
 xli-question .xli-question-print-workspace,
 .panel.panel-default.panel-body.xli-flex-footer.xli-item-dropbox.ng-scope.in {

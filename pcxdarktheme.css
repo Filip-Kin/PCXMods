@@ -197,7 +197,7 @@ xli-question .xli-question-print-workspace,
     border-color: #ffffff !important;
 }
 
-.mat-checkbox-disabled .mat-checkbox-frame {
+input, .mat-checkbox-disabled .mat-checkbox-frame {
     border-color: #626262 !important;
 }
 
